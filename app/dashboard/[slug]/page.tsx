@@ -1,4 +1,4 @@
-import { Counter } from "@/app/components/counter";
+import { Counter } from "@/components/counter";
 
 type Params = Promise<{ slug: string }>;
 
