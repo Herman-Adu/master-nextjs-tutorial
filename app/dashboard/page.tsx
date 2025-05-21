@@ -1,3 +1,7 @@
 export default function DashboardRoute() {
-  return <h1>Dashboard Route</h1>;
+  return (
+    <div>
+      <h1>Dashboard Route</h1>
+    </div>
+  );
 }
