@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         port: "3000",
       },
       {
+        hostname: "master-nextjs-tutorial.vercel.app",
+        protocol: "https",
+        port: "",
+      },
+      {
         hostname: "images.unsplash.com",
         protocol: "https",
         port: "",
