@@ -4,6 +4,8 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { prisma } from "./utils/db";
 import { redirect } from "next/navigation";
 
+/// To-Do add server validation and error handling/ guard programming
+
 export async function handleSubmission(formData: FormData) {
   // get session and user from kinde
   const { getUser } = getKindeServerSession();
