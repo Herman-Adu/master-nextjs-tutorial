@@ -25,6 +25,7 @@ export function BlogPostCard({ data }: BlogPostCardProps) {
             alt="Image for blog"
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
+            priority
           />
         </div>
 
@@ -45,6 +46,7 @@ export function BlogPostCard({ data }: BlogPostCardProps) {
                   alt={data.authorName}
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
               <p className="text-sm font-medium text-gray-700">
