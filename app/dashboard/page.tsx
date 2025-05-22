@@ -7,8 +7,10 @@ import { redirect } from "next/navigation";
 import { BlogPostCard } from "@/components/general/BlogpostCard";
 
 async function getData(userId: string) {
+  // mimick 2 seconds delay foe getData api call
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
+  // get blog posts from database
   const data = await prisma.blogPost.findMany({
     where: {
       authorId: userId,
