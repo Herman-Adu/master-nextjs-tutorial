@@ -57,7 +57,7 @@ export default async function DashboardRoute() {
 // async function that gets the data
 async function BlogPosts() {
   // mimick 2 seconds delay foe getData api call
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  //await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const { getUser } = getKindeServerSession();
   const user = await getUser();

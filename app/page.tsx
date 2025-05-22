@@ -35,8 +35,8 @@ export default function Home() {
 
 // async function that gets the data
 async function BlogPosts() {
-  // mimick 2 seconds delay foe getData api call
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  // mimick 2 seconds delay for getData api call
+  //await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const data = await getData();
 

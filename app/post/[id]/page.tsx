@@ -11,7 +11,7 @@ type Params = Promise<{ id: string }>;
 
 async function getData(id: string) {
   // mimick 2 seconds delay foe getData api call
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  //await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const data = await prisma.blogPost.findUnique({
     where: {
