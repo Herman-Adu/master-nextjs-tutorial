@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 async function getData(userId: string) {
   // mimick 2 seconds delay foe getData api call
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  //await new Promise((resolve) => setTimeout(resolve, 2000));
 
   // get blog posts from database
   const data = await prisma.blogPost.findMany({
