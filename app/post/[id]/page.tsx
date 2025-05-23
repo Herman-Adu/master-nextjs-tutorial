@@ -27,6 +27,21 @@ async function getData(id: string) {
   return data;
 }
 
+// to deploy this as SSG we need to know all urls therefore param before depolyment, needed for the build
+export async function generateStaticParams() {
+  const data = await prisma.blogPost.findMany({
+    select: {
+      id: true,
+    },
+  });
+
+  return data.map((item) => {
+    return {
+      id: item.id,
+    };
+  });
+}
+
 export default async function PostIdPage({ params }: { params: Params }) {
   const { id } = await params;
   //console.log("Params: ", id);
