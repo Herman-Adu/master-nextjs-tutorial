@@ -3,6 +3,9 @@ import { prisma } from "./utils/db";
 import { BlogPostCard } from "@/components/general/BlogpostCard";
 import { Skeleton } from "@/components/ui/skeleton";
 
+// revalidate time in seconds to revalidate the data stored in the cdn
+export const revalidate = 7200;
+
 async function getData() {
   const data = await prisma.blogPost.findMany({
     select: {

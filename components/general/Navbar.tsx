@@ -12,11 +12,11 @@ import {
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 export function Navbar() {
-  // get the user session on the clientside
+  // get the getUser session and the user on the clientside using a client component
   const { getUser } = useKindeBrowserClient();
   const user = getUser();
 
-  // get the user session on the serverside and async await
+  // get the getUser session and the user on the serverside using async await on a server component
   // const { getUser } = getKindeServerSession();
   // const user = await getUser();
 

@@ -3,6 +3,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { prisma } from "./utils/db";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 /// To-Do add server validation and error handling/ guard programming
 
@@ -32,6 +33,9 @@ export async function handleSubmission(formData: FormData) {
       authorName: user.given_name as string,
     },
   });
+
+  // revalidate cache for out index page every 7200 seconds or everry time i create a new blog
+  revalidatePath("/");
 
   return redirect("/dashboard");
 }
