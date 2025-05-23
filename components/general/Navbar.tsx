@@ -8,11 +8,17 @@ import {
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 
+//import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 export function Navbar() {
+  // get the user session on the clientside
   const { getUser } = useKindeBrowserClient();
   const user = getUser();
+
+  // get the user session on the serverside and async await
+  // const { getUser } = getKindeServerSession();
+  // const user = await getUser();
 
   return (
     <nav className="py-5 flex items-center justify-between">

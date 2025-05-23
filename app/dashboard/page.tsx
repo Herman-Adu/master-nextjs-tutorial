@@ -25,7 +25,7 @@ async function getData(userId: string) {
   return data;
 }
 
-export default async function DashboardRoute() {
+export default function DashboardRoute() {
   /*  const { getUser } = getKindeServerSession();
   const user = await getUser();
 
