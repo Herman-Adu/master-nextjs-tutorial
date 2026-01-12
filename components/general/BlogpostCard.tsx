@@ -16,6 +16,8 @@ interface BlogPostCardProps {
 }
 
 export function BlogPostCard({ data }: BlogPostCardProps) {
+  //console.log("Data: ", data);
+
   return (
     <div className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md transition-all hover:shadow-lg">
       <Link href={`/post/${data.id}`} className="block w-full h-full">
